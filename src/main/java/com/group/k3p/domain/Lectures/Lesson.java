@@ -9,7 +9,7 @@ public class Lesson {
     private Long id;
 
     private String title;
-    private int sequence; // 강좌 순서
+    private String subject;
     private String url;
 
     @ManyToOne
@@ -19,9 +19,9 @@ public class Lesson {
     public Lesson() {
     }
 
-    public Lesson(String title, int sequence, String url, Course course) {
+    public Lesson(String title, String subject, String url, Course course) {
         this.title = title;
-        this.sequence = sequence;
+        this.subject = subject;
         this.url = url;
         this.course = course;
     }
@@ -43,12 +43,12 @@ public class Lesson {
         this.title = title;
     }
 
-    public int getSequence() {
-        return sequence;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setSequence(int sequence) {
-        this.sequence = sequence;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getUrl() {

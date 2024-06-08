@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS course (
 CREATE TABLE IF NOT EXISTS lesson (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    sequence INT NOT NULL,
+    subject VARCHAR(255) NOT NULL,
     url VARCHAR(255),
     course_id BIGINT,
     FOREIGN KEY (course_id) REFERENCES course(id)

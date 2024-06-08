@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const watchedLecBtn = document.getElementById("watched_lec");
     const lessonFrame = document.getElementById("lesson-frame");
     const infoTitle = document.getElementById("info_title");
+    const infoSubject = document.getElementById("info_subject");
     const nextLecBtn = document.getElementById("next_lec");
     const prevLecBtn = document.getElementById("previous_lec");
     const lec_selectors = document.querySelectorAll(".lec_selector");
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateLesson_seq(index) {
         lessonFrame.src = lessons[index].url;
+        infoSubject.textContent = lessons[index].subject;
         infoTitle.textContent = lessons[index].title;
         lessonFrame.dataset.lessonId = lessons[index].id;
         currentLessonIndex = index;
