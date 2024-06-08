@@ -30,7 +30,7 @@ public class UserLessonService {
 
         UserLesson userLesson = userLessonRepository.findByUserAndLesson(user, lesson);
         if (userLesson == null) {
-            userLesson = new UserLesson(user, lesson, true);
+            userLesson = new UserLesson(user, lesson, true , false);
             userLessonRepository.save(userLesson);
             return true;
         }

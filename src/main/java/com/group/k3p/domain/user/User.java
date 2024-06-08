@@ -1,5 +1,6 @@
 package com.group.k3p.domain.user;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -54,6 +55,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user")
+    @JsonManagedReference
     private List<UserLesson> userLesson;
 }
 

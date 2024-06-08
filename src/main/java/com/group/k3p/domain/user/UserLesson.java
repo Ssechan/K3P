@@ -7,28 +7,29 @@ import jakarta.persistence.*;
 public class UserLesson {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; //기본 키
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private User user; //강의를 수강한 사용자와의 관계
 
     @ManyToOne
     @JoinColumn(name = "lesson_id")
-    private Lesson lesson;
+    private Lesson lesson; //수강한 강의와의 관계
 
-    private boolean completed; //강의 수강 완료
-    private boolean passed; //강의 통과
+    private boolean completed; //강의 수강 완료 여부
+    private boolean passed; //강의 통과 여부
 
     // 기본 생성자
     public UserLesson() {
     }
 
     // 사용자 정의 생성자
-    public UserLesson(User user, Lesson lesson, boolean completed) {
+    public UserLesson(User user, Lesson lesson, boolean completed, boolean passed) {
         this.user = user;
         this.lesson = lesson;
         this.completed = completed;
+        this.passed = passed;
     }
 
     // Getter 및 Setter
