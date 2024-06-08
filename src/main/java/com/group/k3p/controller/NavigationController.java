@@ -4,21 +4,24 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class NavigationController {
-    @GetMapping("/ad3")
-    public String showAD3() {
-        return "AD3";
+    @GetMapping("/test_1")
+    public String redirectToQuiz1() {
+        return "quiz";
     }
-    @GetMapping("/aidrug")
-    public String showAiDrug() {
-        return "AIDrug";
+    @GetMapping("/test_2")
+    public String redirectToQuiz2() {
+        return "quiz";
     }
-    @GetMapping("/cskstudio")
-    public String showCSKStudio() {
-        return "CSKStudio";
+    @GetMapping("/test_3")
+    public String redirectToQuiz3() {
+        return "quiz";
     }
-    @GetMapping("/milearn")
-    public String showMiLearn() {
-        return "MiLearn";
+    @GetMapping("/test_4")
+    public String redirectToQuiz4() {
+        return "quiz";
     }
-
+    @GetMapping("/test_5")
+    public String redirectToQuiz5() {
+        return "quiz";
+    }
 }

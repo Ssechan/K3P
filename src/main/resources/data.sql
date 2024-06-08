@@ -29,3 +29,27 @@ INSERT INTO lesson (id, title, subject,url, course_id) VALUES (22, '리셉터 �
 INSERT INTO lesson (id, title, subject,url, course_id) VALUES (23, '단백질 설계 과정','단백질 구조 분석' ,'https://www.youtube.com/embed/nDwAQr2c5d0?si=aBHGiGz1p9biqjj3', 1);
 INSERT INTO lesson (id, title, subject,url, course_id) VALUES (24, '단백질 설계 알고리즘','단백질 구조 분석' ,'https://www.youtube.com/embed/nDwAQr2c5d0?si=aBHGiGz1p9biqjj3', 1);
 INSERT INTO lesson (id, title, subject,url, course_id) VALUES (25, '인공 단백질 설계','단백질 구조 분석' ,'https://www.youtube.com/embed/nDwAQr2c5d0?si=aBHGiGz1p9biqjj3', 1);
+
+-- Question 50개 예시
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+INSERT INTO question (question, options, correct_answer) VALUES ('단백질은 무엇으로 이루어져 있나요?', '["핵산", "아미노산", "당류", "지질"]', '아미노산');
+
+

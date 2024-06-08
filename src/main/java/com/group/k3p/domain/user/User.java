@@ -52,7 +52,8 @@ public class User {
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
     }
+
     @OneToMany(mappedBy = "user")
-    private List<UserLesson> userㅣessons;
+    private List<UserLesson> userLesson;
 }
 

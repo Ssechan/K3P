@@ -1,4 +1,4 @@
-package com.group.k3p.domain;
+package com.group.k3p.domain.Lectures;
 
 public class LessonRequest {
     private Long userId;

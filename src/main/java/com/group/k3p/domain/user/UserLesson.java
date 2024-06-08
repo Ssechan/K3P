@@ -17,7 +17,8 @@ public class UserLesson {
     @JoinColumn(name = "lesson_id")
     private Lesson lesson;
 
-    private boolean completed;
+    private boolean completed; //강의 수강 완료
+    private boolean passed; //강의 통과
 
     // 기본 생성자
     public UserLesson() {
@@ -31,35 +32,44 @@ public class UserLesson {
     }
 
     // Getter 및 Setter
-    public Long getId() {
-        return id;
-    }
-
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public User getUser() {
-        return user;
     }
 
     public void setUser(User user) {
         this.user = user;
     }
 
-    public Lesson getLesson() {
-        return lesson;
-    }
-
     public void setLesson(Lesson lesson) {
         this.lesson = lesson;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
+    public void setPassed(boolean passed) {
+        this.passed = passed;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Lesson getLesson() {
+        return lesson;
     }
 
     public boolean isCompleted() {
         return completed;
     }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }}
+    public boolean isPassed() {
+        return passed;
+    }
+}
 

@@ -31,3 +31,11 @@ CREATE TABLE IF NOT EXISTS user_lesson (
     FOREIGN KEY (user_id) REFERENCES user(id),
     FOREIGN KEY (lesson_id) REFERENCES lesson(id)
 );
+
+--Question 테이블 생성
+CREATE TABLE question (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    question VARCHAR(255) NOT NULL,
+    options VARCHAR(255) NOT NULL,
+    correct_answer VARCHAR(255) NOT NULL
+);
