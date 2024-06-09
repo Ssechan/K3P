@@ -21,6 +21,14 @@ public class User {
     @Column(nullable = false, unique = true)
     private String userEmail;
 
+    @OneToMany(mappedBy = "user")
+    @JsonManagedReference
+    private List<UserLesson> userLessons;
+
+    @OneToMany(mappedBy = "user")
+    @JsonManagedReference
+    private List<UserQuiz> userQuizzes;
+
     // Getters and Setters
     public Long getId() {
         return id;
@@ -54,8 +62,20 @@ public class User {
         this.userEmail = userEmail;
     }
 
-    @OneToMany(mappedBy = "user")
-    @JsonManagedReference
-    private List<UserLesson> userLesson;
+    public List<UserLesson> getUserLessons() {
+        return userLessons;
+    }
+
+    public void setUserLessons(List<UserLesson> userLessons) {
+        this.userLessons = userLessons;
+    }
+
+    public List<UserQuiz> getUserQuizzes() {
+        return userQuizzes;
+    }
+
+    public void setUserQuizzes(List<UserQuiz> userQuizzes) {
+        this.userQuizzes = userQuizzes;
+    }
 }
 

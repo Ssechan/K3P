@@ -76,7 +76,7 @@ public class QuizService {
             for (Lesson lesson : quiz.getLessons()) {
                 UserLesson userLesson = userLessonRepository.findByUserAndLesson(user, lesson);
                 if (userLesson == null) {
-                    userLesson = new UserLesson(user, lesson, false, true);
+                    userLesson = new UserLesson(user, lesson, true, true);
                 } else {
                     userLesson.setPassed(true);
                 }

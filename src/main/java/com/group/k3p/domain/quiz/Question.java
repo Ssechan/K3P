@@ -24,6 +24,7 @@ public class Question {
     @JsonBackReference
     private Quiz quiz;
 
+    // Getters and Setters
     public void setQuiz(Quiz quiz) {
         this.quiz = quiz;
     }

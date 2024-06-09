@@ -1,6 +1,9 @@
 package com.group.k3p.domain.Lectures;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.group.k3p.domain.quiz.Quiz;
+import com.group.k3p.domain.user.UserLesson;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -18,26 +21,23 @@ public class Lesson {
 
     @ManyToOne
     @JoinColumn(name = "course_id")
+    @JsonBackReference
     private Course course; // 강의가 속한 코스
 
     @ManyToOne
     @JoinColumn(name = "quiz_id")
+    @JsonBackReference
     private Quiz quiz; // 강의와 관련된 퀴즈
+
+    @OneToMany(mappedBy = "lesson")
+    @JsonManagedReference
+    private List<UserLesson> userLessons;
 
     // 기본 생성자
     public Lesson() {
     }
 
-    // 사용자 정의 생성자
-    public Lesson(String title, String subject, String url, Course course, Quiz quiz) {
-        this.title = title;
-        this.subject = subject;
-        this.url = url;
-        this.course = course;
-        this.quiz = quiz;
-    }
-
-    // Getter 및 Setter
+    // 사용자 정의 생성자, Getter 및 Setter 생략
     public Long getId() {
         return id;
     }
@@ -84,5 +84,13 @@ public class Lesson {
 
     public void setQuiz(Quiz quiz) {
         this.quiz = quiz;
+    }
+
+    public List<UserLesson> getUserLessons() {
+        return userLessons;
+    }
+
+    public void setUserLessons(List<UserLesson> userLessons) {
+        this.userLessons = userLessons;
     }
 }

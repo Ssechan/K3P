@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('/lessons')
         .then(response => response.json())
         .then(data => {
+            console.log(data);//data 구조 확인
             lessons = data;
             if (lessons.length > 0) {
                 updateLesson_seq(0);
@@ -132,4 +133,20 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch(error => console.error('Error fetching completed lessons:', error));
     }
+    function fetchLessons() {
+        fetch('/lessons')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // data 구조 확인
+                lessons = data;
+                if (lessons.length > 0) {
+                    updateLesson_seq(0);
+                    updateLecSelectorColors(); // 페이지 로드 시 lec_selector 색상 업데이트
+                }
+            })
+            .catch(error => console.error('Error fetching lessons:', error));
+    }
+
+    // 페이지 로드 시 강의 목록을 가져옴
+    fetchLessons();
 });

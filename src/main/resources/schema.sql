@@ -12,6 +12,12 @@ CREATE TABLE course (
                         level VARCHAR(255)
 );
 
+-- Quiz 테이블 생성
+CREATE TABLE quiz (
+                      id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                      title VARCHAR(255)
+);
+
 -- Lesson 테이블 생성
 CREATE TABLE lesson (
                         id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -19,13 +25,9 @@ CREATE TABLE lesson (
                         subject VARCHAR(255),
                         url VARCHAR(255),
                         course_id BIGINT,
-                        FOREIGN KEY (course_id) REFERENCES course(id)
-);
-
--- Quiz 테이블 생성
-CREATE TABLE quiz (
-                      id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                      title VARCHAR(255)
+                        quiz_id BIGINT,
+                        FOREIGN KEY (course_id) REFERENCES course(id),
+                        FOREIGN KEY (quiz_id) REFERENCES quiz(id)
 );
 
 -- Question 테이블 생성
@@ -46,5 +48,13 @@ CREATE TABLE user_lesson (
                              completed BOOLEAN,
                              passed BOOLEAN,
                              FOREIGN KEY (user_id) REFERENCES user(id),
+                             FOREIGN KEY (lesson_id) REFERENCES lesson(id)
+);
+-- 퀴즈와 레슨의 연관 관계 테이블 생성
+CREATE TABLE quiz_lesson (
+                             quiz_id BIGINT,
+                             lesson_id BIGINT,
+                             PRIMARY KEY (quiz_id, lesson_id),
+                             FOREIGN KEY (quiz_id) REFERENCES quiz(id),
                              FOREIGN KEY (lesson_id) REFERENCES lesson(id)
 );

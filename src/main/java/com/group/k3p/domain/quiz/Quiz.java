@@ -1,7 +1,9 @@
 package com.group.k3p.domain.quiz;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.group.k3p.domain.Lectures.Lesson;
+import com.group.k3p.domain.user.UserQuiz;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -11,27 +13,23 @@ import java.util.List;
 public class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Quiz 엔티티의 기본 키입니다.
+    private Long id;
 
-    private String title; // 퀴즈의 제목을 저장합니다.
+    private String title;
 
     @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
     @JsonManagedReference
-    private List<Question> questions; // 퀴즈와 관련된 질문 목록입니다.
+    private List<Question> questions;
 
     @OneToMany(mappedBy = "quiz")
-    private List<Lesson> lessons; // 퀴즈와 관련된 강의 목록입니다.
+    @JsonManagedReference
+    private List<Lesson> lessons;
 
-    // 기본 생성자
-    public Quiz() {
-    }
+    @OneToMany(mappedBy = "quiz")
+    @JsonManagedReference
+    private List<UserQuiz> userQuizzes;
 
-    // 사용자 정의 생성자
-    public Quiz(String title) {
-        this.title = title;
-    }
-
-    // Getter 및 Setter
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -62,5 +60,13 @@ public class Quiz {
 
     public void setLessons(List<Lesson> lessons) {
         this.lessons = lessons;
+    }
+
+    public List<UserQuiz> getUserQuizzes() {
+        return userQuizzes;
+    }
+
+    public void setUserQuizzes(List<UserQuiz> userQuizzes) {
+        this.userQuizzes = userQuizzes;
     }
 }

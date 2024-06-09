@@ -16,6 +16,8 @@ public class LessonController {
 
     @GetMapping("/lessons")
     public List<Lesson> getAllLessons() {
-        return lessonRepository.findAll();
+        List<Lesson> lessons = lessonRepository.findAll();
+        lessons.forEach(lesson -> System.out.println(lesson));
+        return lessons;
     }
 }
