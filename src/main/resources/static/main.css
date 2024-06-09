@@ -813,6 +813,7 @@ span.logo {
   border-right: 40px solid transparent;
 }
 .component_flag {
+  display: none;
   position: relative;
   width: 100%;
   height: 250px;

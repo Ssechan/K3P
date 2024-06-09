@@ -38,11 +38,8 @@ public class UserLessonController {
     }
 
     @GetMapping("/completedLessons")
-    public ResponseEntity<Map<String, Object>> getCompletedLessons() {
+    public Map<String, List<Long>> getCompletedLessons() {
         Long userId = 1L; // 임시로 userId를 1로 고정
-        List<Long> completedLessons = userLessonService.getCompletedLessons(userId);
-        Map<String, Object> response = new HashMap<>();
-        response.put("completedLessons", completedLessons);
-        return ResponseEntity.ok(response);
+        return userLessonService.getCompletedAndPassedLessons(userId);
     }
 }

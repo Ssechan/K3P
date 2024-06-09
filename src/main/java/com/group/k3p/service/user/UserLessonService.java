@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -53,4 +54,22 @@ public class UserLessonService {
                 .map(userLesson -> userLesson.getLesson().getId())
                 .collect(Collectors.toList());
     }
+    public Map<String, List<Long>> getCompletedAndPassedLessons(Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user ID: " + userId));
+        List<UserLesson> userLessons = userLessonRepository.findByUser(user);
+
+        List<Long> completedLessons = userLessons.stream()
+                .filter(UserLesson::isCompleted)
+                .map(ul -> ul.getLesson().getId())
+                .collect(Collectors.toList());
+
+        List<Long> passedLessons = userLessons.stream()
+                .filter(UserLesson::isPassed)
+                .map(ul -> ul.getLesson().getId())
+                .collect(Collectors.toList());
+
+        return Map.of("completedLessons", completedLessons, "passedLessons", passedLessons);
+    }
+
 }

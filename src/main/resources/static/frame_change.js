@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const watchedLecBtn = document.getElementById("watched_lec");
     const lessonFrame = document.getElementById("lesson-frame");
     const infoTitle = document.getElementById("info_title");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('/lessons')
         .then(response => response.json())
         .then(data => {
-            console.log(data);//data 구조 확인
+            console.log(data); // data 구조 확인
             lessons = data;
             if (lessons.length > 0) {
                 updateLesson_seq(0);
@@ -49,19 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 // lec_selector의 배경색 변경
-                lec_selectors.forEach(selector => {
-                    const selectorLessonId = selector.getAttribute('data-lesson-id');
-                    if (data.completedLessons.includes(parseInt(selectorLessonId))) {
-                        selector.style.backgroundColor = 'yellow';
-                    } else {
-                        selector.style.backgroundColor = ''; // 기본 배경색으로 초기화
-                    }
-                });
+                updateLecSelectorColors();
             })
             .catch(error => console.error('Error checking lesson completion:', error));
     }
 
-    watchedLecBtn.addEventListener("click", function () {
+    watchedLecBtn.addEventListener("click", function() {
         const lessonId = lessonFrame.dataset.lessonId;
         fetch('/api/completeLesson', {
             method: 'POST',
@@ -79,11 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     svgCheck.style.display = "block";
 
                     // lec_selector의 배경색 변경
-                    lec_selectors.forEach(selector => {
-                        if (selector.getAttribute('data-lesson-id') == lessonId) {
-                            selector.style.backgroundColor = 'yellow';
-                        }
-                    });
+                    updateLecSelectorColors();
                 } else {
                     alert("수강 완료 처리에 실패했습니다.");
                 }
@@ -94,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 
-    nextLecBtn.addEventListener("click", function () {
+    nextLecBtn.addEventListener("click", function() {
         if (currentLessonIndex < lessons.length - 1) {
             currentLessonIndex++;
             updateLesson_seq(currentLessonIndex);
@@ -103,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    prevLecBtn.addEventListener("click", function () {
+    prevLecBtn.addEventListener("click", function() {
         if (currentLessonIndex > 0) {
             currentLessonIndex--;
             updateLesson_seq(currentLessonIndex);
@@ -113,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     lec_selectors.forEach((button, index) => {
-        button.addEventListener("click", function () {
-            updateLesson_seq( 24 - index);
+        button.addEventListener("click", function() {
+            updateLesson_seq(24 - index);
         });
     });
 
@@ -124,8 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 lec_selectors.forEach(selector => {
                     const selectorLessonId = selector.getAttribute('data-lesson-id');
-                    if (data.completedLessons.includes(parseInt(selectorLessonId))) {
-                        selector.style.backgroundColor = 'yellow';
+                    if (data.passedLessons.includes(parseInt(selectorLessonId))) {
+                        selector.style.backgroundColor = '#06b500';
+                    } else if (data.completedLessons.includes(parseInt(selectorLessonId))) {
+                        selector.style.backgroundColor = 'yellow'; // 통과한 강의는 초록색으로 표시
                     } else {
                         selector.style.backgroundColor = ''; // 기본 배경색으로 초기화
                     }
@@ -133,20 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .catch(error => console.error('Error fetching completed lessons:', error));
     }
-    function fetchLessons() {
-        fetch('/lessons')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data); // data 구조 확인
-                lessons = data;
-                if (lessons.length > 0) {
-                    updateLesson_seq(0);
-                    updateLecSelectorColors(); // 페이지 로드 시 lec_selector 색상 업데이트
-                }
-            })
-            .catch(error => console.error('Error fetching lessons:', error));
-    }
-
-    // 페이지 로드 시 강의 목록을 가져옴
-    fetchLessons();
 });
