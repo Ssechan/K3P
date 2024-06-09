@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const lec_selectors = document.querySelectorAll(".lec_selector");
+    const quizId = document.getElementById('quizId').value; // 퀴즈 ID 가져오기
 
-    fetch('/api/quiz')
+    fetch(`/api/quiz/${quizId}`)
         .then(response => response.json())
         .then(data => {
             console.log('Received quiz data:', data);  // 디버깅 로그 추가
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 const questionNumber = document.createElement('div');
                 questionNumber.textContent = `Question ${index + 1}`;
-                questionNumber.className = 'questionNumber'
+                questionNumber.className = 'questionNumber';
                 card.appendChild(questionNumber);
 
                 const questionTitle = document.createElement('h2');
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let [key, value] of formData.entries()) {
             answers[key] = value;
         }
+        answers["quizId"] = quizId; // 퀴즈 ID를 답안에 추가
         console.log('Submitting answers:', answers); // 디버깅용 콘솔 로그
 
         fetch('/api/submit', {
@@ -94,5 +96,4 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => console.error('Error updating lesson status:', error));
     }
-
 });

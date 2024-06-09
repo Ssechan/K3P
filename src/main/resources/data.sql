@@ -37,7 +37,7 @@ INSERT INTO lesson (id, title, subject,url, course_id, quiz_id) VALUES (23, '단
 INSERT INTO lesson (id, title, subject,url, course_id, quiz_id) VALUES (24, '단백질 설계 알고리즘','단백질 구조 분석' ,'https://www.youtube.com/embed/nDwAQr2c5d0?si=aBHGiGz1p9biqjj3', 1, 5);
 INSERT INTO lesson (id, title, subject,url, course_id, quiz_id) VALUES (25, '인공 단백질 설계','단백질 구조 분석' ,'https://www.youtube.com/embed/nDwAQr2c5d0?si=aBHGiGz1p9biqjj3', 1, 5);
 
--- Question 예시
+-- Question(quizid: 1)
 INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다', '["1", "2", "3", "4"]', '1', 1);
 INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다', '["1", "2", "3", "4"]', '2', 1);
 INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다', '["1", "2", "3", "4"]', '3', 1);
@@ -59,11 +59,119 @@ INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정�
 INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다', '["1", "2", "3", "4"]', '3', 1);
 INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다', '["1", "2", "3", "4"]', '4', 1);
 
+--Question(quizid: 2)
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(2)', '["1", "2", "3", "4"]', '1', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(2)', '["1", "2", "3", "4"]', '2', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(2)', '["1", "2", "3", "4"]', '3', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(2)', '["1", "2", "3", "4"]', '4', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(2)', '["1", "2", "3", "4"]', '1', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(2)', '["1", "2", "3", "4"]', '2', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(2)', '["1", "2", "3", "4"]', '3', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(2)', '["1", "2", "3", "4"]', '4', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(2)', '["1", "2", "3", "4"]', '1', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(2)', '["1", "2", "3", "4"]', '2', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(2)', '["1", "2", "3", "4"]', '3', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(2)', '["1", "2", "3", "4"]', '4', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(2)', '["1", "2", "3", "4"]', '1', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(2)', '["1", "2", "3", "4"]', '2', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(2)', '["1", "2", "3", "4"]', '3', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(2)', '["1", "2", "3", "4"]', '4', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(2)', '["1", "2", "3", "4"]', '1', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(2)', '["1", "2", "3", "4"]', '2', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(2)', '["1", "2", "3", "4"]', '3', 2);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(2)', '["1", "2", "3", "4"]', '4', 2);
+
+--Question(quizid: 3)
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(3)', '["1", "2", "3", "4"]', '1', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(3)', '["1", "2", "3", "4"]', '2', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(3)', '["1", "2", "3", "4"]', '3', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(3)', '["1", "2", "3", "4"]', '4', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(3)', '["1", "2", "3", "4"]', '1', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(3)', '["1", "2", "3", "4"]', '2', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(3)', '["1", "2", "3", "4"]', '3', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(3)', '["1", "2", "3", "4"]', '4', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(3)', '["1", "2", "3", "4"]', '1', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(3)', '["1", "2", "3", "4"]', '2', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(3)', '["1", "2", "3", "4"]', '3', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(3)', '["1", "2", "3", "4"]', '4', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(3)', '["1", "2", "3", "4"]', '1', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(3)', '["1", "2", "3", "4"]', '2', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(3)', '["1", "2", "3", "4"]', '3', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(3)', '["1", "2", "3", "4"]', '4', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(3)', '["1", "2", "3", "4"]', '1', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(3)', '["1", "2", "3", "4"]', '2', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(3)', '["1", "2", "3", "4"]', '3', 3);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(3)', '["1", "2", "3", "4"]', '4', 3);
+
+--Question(quizid: 4)
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(4)', '["1", "2", "3", "4"]', '1', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(4)', '["1", "2", "3", "4"]', '2', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(4)', '["1", "2", "3", "4"]', '3', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(4)', '["1", "2", "3", "4"]', '4', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(4)', '["1", "2", "3", "4"]', '1', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(4)', '["1", "2", "3", "4"]', '2', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(4)', '["1", "2", "3", "4"]', '3', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(4)', '["1", "2", "3", "4"]', '4', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(4)', '["1", "2", "3", "4"]', '1', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(4)', '["1", "2", "3", "4"]', '2', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(4)', '["1", "2", "3", "4"]', '3', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(4)', '["1", "2", "3", "4"]', '4', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(4)', '["1", "2", "3", "4"]', '1', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(4)', '["1", "2", "3", "4"]', '2', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(4)', '["1", "2", "3", "4"]', '3', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(4)', '["1", "2", "3", "4"]', '4', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(4)', '["1", "2", "3", "4"]', '1', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(4)', '["1", "2", "3", "4"]', '2', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(4)', '["1", "2", "3", "4"]', '3', 4);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(4)', '["1", "2", "3", "4"]', '4', 4);
+
+--Question(quizid: 5)
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(5)', '["1", "2", "3", "4"]', '1', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(5)', '["1", "2", "3", "4"]', '2', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(5)', '["1", "2", "3", "4"]', '3', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(5)', '["1", "2", "3", "4"]', '4', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(5)', '["1", "2", "3", "4"]', '1', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(5)', '["1", "2", "3", "4"]', '2', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(5)', '["1", "2", "3", "4"]', '3', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(5)', '["1", "2", "3", "4"]', '4', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(5)', '["1", "2", "3", "4"]', '1', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(5)', '["1", "2", "3", "4"]', '2', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(5)', '["1", "2", "3", "4"]', '3', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(5)', '["1", "2", "3", "4"]', '4', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(5)', '["1", "2", "3", "4"]', '1', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(5)', '["1", "2", "3", "4"]', '2', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(5)', '["1", "2", "3", "4"]', '3', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(5)', '["1", "2", "3", "4"]', '4', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 1입니다(5)', '["1", "2", "3", "4"]', '1', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 2입니다(5)', '["1", "2", "3", "4"]', '2', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 3입니다(5)', '["1", "2", "3", "4"]', '3', 5);
+INSERT INTO question (question, options, correct_answer, quiz_id) VALUES ('정답은 4입니다(5)', '["1", "2", "3", "4"]', '4', 5);
+
 --퀴즈, 레슨 관계 중간 테이블
 INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (1, 1);
 INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (1, 2);
 INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (1, 3);
 INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (1, 4);
 INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (1, 5);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (2, 6);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (2, 7);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (2, 8);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (2, 9);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (2, 10);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (3, 11);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (3, 12);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (3, 13);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (3, 14);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (3, 15);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (4, 16);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (4, 17);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (4, 18);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (4, 19);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (4, 20);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (5, 21);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (5, 22);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (5, 23);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (5, 24);
+INSERT INTO quiz_lesson (quiz_id, lesson_id) VALUES (5, 25);
 
 

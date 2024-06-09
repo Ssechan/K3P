@@ -36,8 +36,10 @@ public class QuizService {
     @Autowired
     private QuizRepository quizRepository;
 
-    public List<Question> getRandomQuestions(int numQuestions) {
-        List<Question> allQuestions = questionRepository.findAll();
+    public List<Question> getRandomQuestionsFromQuiz(Long quizId, int numQuestions) {
+        Quiz quiz = quizRepository.findById(quizId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid quiz ID: " + quizId));
+        List<Question> allQuestions = quiz.getQuestions();
         Collections.shuffle(allQuestions);
         return allQuestions.subList(0, Math.min(numQuestions, allQuestions.size()));
     }

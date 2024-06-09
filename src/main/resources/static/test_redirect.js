@@ -1,24 +1,10 @@
-
 document.addEventListener("DOMContentLoaded", function() {
-    const test1Div = document.getElementById("test_1");
-    const test2Div = document.getElementById("test_2");
-    const test3Div = document.getElementById("test_3");
-    const test4Div = document.getElementById("test_4");
-    const test5Div = document.getElementById("test_5");
+    const quizDivs = document.querySelectorAll(".test_spot");
 
-    test1Div.addEventListener("click", function() {
-    window.location.href = "/test_1";
-    });
-    test2Div.addEventListener("click", function() {
-        window.location.href = "/test_2";
-    });
-    test3Div.addEventListener("click", function() {
-        window.location.href = "/test_3";
-    });
-    test4Div.addEventListener("click", function() {
-        window.location.href = "/test_4";
-    });
-    test5Div.addEventListener("click", function() {
-        window.location.href = "/test_5";
+    quizDivs.forEach(div => {
+        div.addEventListener("click", function() {
+            const quizId = this.id.split('_')[1]; // "test_1"에서 숫자 1을 추출
+            window.location.href = `/test_${quizId}`;
+        });
     });
 });
