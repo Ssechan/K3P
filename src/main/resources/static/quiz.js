@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const lec_selectors = document.querySelectorAll(".lec_selector");
     const quizId = document.getElementById('quizId').value; // 퀴즈 ID 가져오기
 
     fetch(`/api/quiz/${quizId}`)
@@ -77,23 +76,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert(`10문제 중 ${score}문제 맞히셨습니다!`);
                 if (score >= 9) {
                     alert("축하해요! 퀴즈를 통과하셨습니다!");
-                    updateLessonStatus();
                 }
                 window.location.href = '/main';
             })
             .catch(error => console.error('Error:', error));
     });
-
-    function updateLessonStatus() {
-        fetch('/api/completedLessons')
-            .then(response => response.json())
-            .then(data => {
-                lec_selectors.forEach(selector => {
-                    const selectorLessonId = selector.getAttribute('data-lesson-id');
-                    if (data.completedLessons.includes(parseInt(selectorLessonId))) {
-                        selector.style.backgroundColor = 'green';} // 통과한 강의는 초록색으로 표시
-                });
-            })
-            .catch(error => console.error('Error updating lesson status:', error));
-    }
 });
