@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 lec_selectors.forEach(selector => {
                     const selectorLessonId = selector.getAttribute('data-lesson-id');
                     if (data.passedLessons.includes(parseInt(selectorLessonId))) {
-                        selector.style.backgroundColor = '#06b500';
+                        selector.style.backgroundColor = '#5daa72';
                     } else if (data.completedLessons.includes(parseInt(selectorLessonId))) {
                         selector.style.backgroundColor = 'yellow'; // 통과한 강의는 초록색으로 표시
                     } else {

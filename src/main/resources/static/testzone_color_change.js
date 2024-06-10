@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(isPassed => {
                 if (isPassed) {
                     const testSpot = document.getElementById(elementId);
-                    testSpot.querySelector('.component_frame_top').style.backgroundColor = '#00f846';
-                    testSpot.querySelector('.test_spot_compo_left').style.backgroundColor = '#02bd37';
-                    testSpot.querySelector('.test_spot_compo_right').style.backgroundColor = '#00dd3f';
+                    testSpot.querySelector('.component_frame_top').style.backgroundColor = '#82db9b';
+                    testSpot.querySelector('.test_spot_compo_left').style.backgroundColor = '#5cbd77';
+                    testSpot.querySelector('.test_spot_compo_right').style.backgroundColor = '#6ed48b';
                 }
             })
             .catch(error => console.error('Error checking quiz status:', error));
